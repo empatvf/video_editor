@@ -40,7 +40,7 @@ class VideoEditorController extends ChangeNotifier {
   /// Video from [File].
   final File file;
 
-  final VideoPlayerController video;
+  final VideoPlayerController videoPlayer;
 
   /// Constructs a [VideoEditorController] that edits a video from a file.
   ///
@@ -53,9 +53,9 @@ class VideoEditorController extends ChangeNotifier {
     this.trimThumbnailsQuality = 10,
     this.coverStyle = const CoverSelectionStyle(),
     this.cropStyle = const CropGridStyle(),
-    required this.video,
+    required this.videoPlayer,
     TrimSliderStyle? trimStyle,
-  })  : _video = video,
+  })  : _video = videoPlayer,
         trimStyle = trimStyle ?? TrimSliderStyle(),
         assert(maxDuration > minDuration,
             'The maximum duration must be bigger than the minimum duration');

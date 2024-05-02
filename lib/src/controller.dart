@@ -53,7 +53,7 @@ class VideoEditorController extends ChangeNotifier {
     this.trimThumbnailsQuality = 10,
     this.coverStyle = const CoverSelectionStyle(),
     this.cropStyle = const CropGridStyle(),
-    this.video,
+    required this.video,
     TrimSliderStyle? trimStyle,
   })  : _video = video,
         trimStyle = trimStyle ?? TrimSliderStyle(),
